@@ -1,0 +1,109 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+header {
+  width: 100%;
+  padding-block: 12px;
+}
+nav {
+  padding-inline: 60px;
+}
+a {
+  color: #40196d !important;
+}
+.navLinks {
+  width: 70%;
+  display: flex;
+  justify-content: space-around;
+}
+.navRight .navButtons {
+  display: flex;
+  gap: 28px;
+}
+.navButtons {
+  width: max-content;
+}
+.navButtons button {
+  padding-block: 14.5px;
+  padding-inline: 31px;
+}
+#joinKuda {
+  background-color: #40196d;
+  color: #fff;
+  border-radius: 10px;
+}
+
+.section1 {
+  margin-inline: 130px;
+  position: relative;
+}
+/* hero section */
+.heroDiv {
+  margin-top: 70px;
+  display: flex;
+  justify-content: space-between;
+}
+.heroTextDiv {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  justify-content: center;
+}
+h1 {
+  color: #40196d;
+  font-size: 48px;
+  font-weight: 900;
+}
+.heroImageDiv {
+  display: flex;
+  gap: 11px;
+}
+.heroFooter {
+  color: #979797;
+  display: flex;
+  gap: 5px;
+}
+.heroFooter img {
+  margin-top: 4px;
+  height: 17px;
+  width: 19px;
+}
+.popUp {
+  position: absolute;
+  bottom: -50px;
+  right: 50%;
+  padding-block: 19px;
+  padding-inline: 20.9px;
+  border: 1px solid #979797;
+  border-radius: 10px;
+  background-color: #fff;
+  transform: translate(50%);
+}
+.section1div{
+  margin-top: 30px;
+  display: flex;
+}
+.section1divReverse{
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+/* use 
+* @media screen and (min-width: 479px) and (max-width: 991px)
+* fot tab specific screens
+*/
+
+@media screen and (max-width: 479px) {
+  .section1 {
+    margin-inline: 30px;
+  }
+  .heroDiv {
+    flex-direction: column;
+  }
+  .popUp {
+    right: 0;
+    transform: translate(0);
+  }
+}
