@@ -14,19 +14,24 @@ a {
 }
 .navLinks {
   width: 70%;
+  height: 100%;
   display: flex;
+  align-items: center;
   justify-content: space-around;
 }
-.navRight .navButtons {
+.navRight .navButtonsParent {
+  width: 100%;
   display: flex;
   gap: 28px;
+  align-items: center;
 }
-.navButtons {
-  width: max-content;
-}
-.navButtons button {
+.navButtonsParent div button {
   padding-block: 14.5px;
   padding-inline: 31px;
+}
+.navButtonsParent img {
+  width: 40px;
+  height: 37px;
 }
 #joinKuda {
   background-color: #40196d;
@@ -36,12 +41,12 @@ a {
 
 .section1 {
   margin-inline: 130px;
-  position: relative;
 }
 /* hero section */
 .heroDiv {
   margin-top: 70px;
   display: flex;
+  position: relative;
   justify-content: space-between;
 }
 .heroTextDiv {
@@ -71,20 +76,35 @@ h1 {
 }
 .popUp {
   position: absolute;
-  bottom: -50px;
+  bottom: -20px;
   right: 50%;
+  display: flex;
+  gap: 31px;
+  align-items: center;
+  width: max-content;
   padding-block: 19px;
   padding-inline: 20.9px;
-  border: 1px solid #979797;
+  border: 1px solid #dfe3ff;
   border-radius: 10px;
   background-color: #fff;
   transform: translate(50%);
 }
-.section1div{
+.popUp a {
+  text-decoration: underline;
+}
+.popUp button {
+  color: #40196d;
+  font-weight: 700;
+  border-radius: 10px;
+  background-color: #dfe3ff;
+  padding-inline: 15px;
+  padding-block: 12.4px;
+}
+.section1div {
   margin-top: 30px;
   display: flex;
 }
-.section1divReverse{
+.section1divReverse {
   margin-top: 30px;
   display: flex;
   flex-direction: row-reverse;
@@ -95,7 +115,49 @@ h1 {
 * fot tab specific screens
 */
 
+@media screen and (min-width: 479px) and (max-width: 968px) {
+  nav {
+    padding-inline: 10px;
+  }
+  .navRight .navButtonsParent {
+    gap: 10px;
+  }
+  .navButtonsParent div {
+    display: flex;
+  }
+  .navButtonsParent div button {
+    padding-block: 5px;
+    padding-inline: 10px;
+    font-size: 14px;
+    text-wrap: nowrap;
+  }
+  #mobileLogo {
+    display: none;
+  }
+  .section1 {
+    margin-inline: 20px;
+  }
+  .section1div {
+  flex-direction: column;
+}
+.section1divReverse {
+  flex-direction: column;
+}
+}
+
 @media screen and (max-width: 479px) {
+  .navRight .navButtonsParent {
+    gap: 10px;
+  }
+  .navButtonsParent div {
+    display: flex;
+  }
+  .navButtonsParent div button {
+    font-size: 14px;
+    padding-block: 7px;
+    padding-inline: 15px;
+    text-wrap: nowrap;
+  }
   .section1 {
     margin-inline: 30px;
   }
@@ -104,6 +166,13 @@ h1 {
   }
   .popUp {
     right: 0;
+    width: 100%;
     transform: translate(0);
+  }
+  .section1div {
+    flex-direction: column;
+  }
+  .section1divReverse {
+    flex-direction: column;
   }
 }
